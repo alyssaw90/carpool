@@ -1,7 +1,7 @@
 <h1 class="text-center">Happy Carpooling!</h1>
 
 <alerts></alerts>
-
+<!-- Only showing when user is not logged in. -->
 <div ng-controller="CarouselCtrl" ng-hide="currentUser">
   <div style="height: 305px">
     <carousel interval="myInterval">
@@ -18,6 +18,5 @@
     <div class="col-md-6">
       <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
     </div>
-
   </div>
 </div>
