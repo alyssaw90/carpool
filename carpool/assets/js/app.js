@@ -10,6 +10,14 @@ carpoolApp.config(['$routeProvider', '$locationProvider',function($routeProvider
     templateUrl: '/views/home.html',
     controller: 'HomeCtrl'
   })
+  .when('/about',{
+    templateUrl:'/views/about.html',
+        controller:'StaticCtrl'
+  })
+  .when('/faq',{
+    templateUrl:'/views/faq.html',
+    controller:'StaticCtrl'
+  })
 
   carpoolApp.run(['UserService',function(UserService){
 
