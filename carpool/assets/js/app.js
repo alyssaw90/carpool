@@ -11,4 +11,12 @@ carpoolApp.config(['$routeProvider', '$locationProvider',function($routeProvider
     controller: 'HomeCtrl'
   })
 
+  carpoolApp.run(['UserService',function(UserService){
+
+    UserService.check(function(err,data){
+        console.log('check',err,data);
+    });
+
+}]);
+
 }])
