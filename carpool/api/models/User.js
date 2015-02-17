@@ -24,7 +24,7 @@ module.exports = {
       unique: true
     },
     password: {
-      type: 'string'
+      type: 'string',
       required: true
     }
     // toJSON:function(){
