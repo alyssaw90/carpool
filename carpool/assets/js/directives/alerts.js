@@ -1,4 +1,4 @@
-app.directive('alerts', function(){
+carpoolApp.directive('alerts', function(){
   return {
   restrict:'E',
   controller:['$scope', 'AlertService', function($scope, AlertService) {
