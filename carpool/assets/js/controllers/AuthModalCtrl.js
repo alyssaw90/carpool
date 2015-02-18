@@ -8,6 +8,7 @@ carpoolApp.controller('AuthModalCtrl',['$scope','$http','$modalInstance','UserSe
                     alert(err);
                 }else if(data.user){
                     //successful login
+                    AlertService.add('success','Welcome!');
                     $modalInstance.close();
                 }else{
                     //login error (bad user or pass)
@@ -20,7 +21,7 @@ carpoolApp.controller('AuthModalCtrl',['$scope','$http','$modalInstance','UserSe
     $scope.signup = function(){
 
         if($scope.signupPassword != $scope.signupPasswordConfirm){
-            alert('your password confirmation does not match');
+            AlertService.add('danger','Password is not a match.')
             return;
         }
 

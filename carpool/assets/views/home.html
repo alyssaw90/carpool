@@ -1,7 +1,8 @@
+<alerts></alerts>
+
 <!-- Only showing when user is not logged in. -->
 <div ng-hide="currentUser">
   <h1 class="text-center">Happy Carpooling!</h1>
-  <alerts></alerts>
   <div ng-controller="CarouselCtrl" >
     <div style="height: 305px">
       <carousel interval="myInterval">
@@ -14,21 +15,14 @@
         </slide>
       </carousel>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-      </div>
-    </div>
   </div>
 </div>
 
 <!-- Showing after a user logs in -->
 <div ng-show="currentUser">
-
   <div class="row">
     <h1>Add or join a ride <a href="/ride/new" class="btn btn-success pull-right">Add a ride</a> </h1>
   </div>
-
   <div class="row">
     <table class="table">
       <thead>

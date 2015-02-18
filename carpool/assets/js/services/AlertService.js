@@ -1,5 +1,5 @@
 carpoolApp.factory('AlertService',[function(){
-
+    console.log('AlertService loaded')
     var alerts=[];
 
     return {
