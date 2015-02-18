@@ -1,6 +1,6 @@
-var carpoolApp = angular.module('CarpoolApp',['ui.bootstrap','ngRoute', 'ngAnimate','ngTouch']);
+var carpoolApp = angular.module('CarpoolApp',['ui.bootstrap','ngRoute', 'ngAnimate','ngTouch','uiGmapgoogle-maps']);
 
-carpoolApp.config(['$routeProvider', '$locationProvider',function($routeProvider,$locationProvider) {
+carpoolApp.config(['$routeProvider', '$locationProvider','uiGmapGoogleMapApiProvider', function($routeProvider,$locationProvider,uiGmapGoogleMapApiProvider) {
 
   //no more #!
   $locationProvider.html5Mode(true);
@@ -26,6 +26,14 @@ carpoolApp.config(['$routeProvider', '$locationProvider',function($routeProvider
     templateUrl:'/views/faq.html',
     controller:'StaticCtrl'
   })
+
+
+
+    uiGmapGoogleMapApiProvider.configure({
+        key: window.GOOGLE_MAPS_KEY,
+        v: '3.17',
+        libraries: 'weather,geometry,visualization'
+    });
 
 }]);
 
