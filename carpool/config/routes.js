@@ -39,6 +39,8 @@ module.exports.routes = {
   'delete /api/auth':'AuthController.logout',
   'get /api/auth':'AuthController.check',
 
+  'get /api/user/me':'UserController.myprofile',
+
   "get *": {
     controller:"PagesController",
     action:"index",

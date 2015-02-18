@@ -6,6 +6,10 @@
  */
 
 module.exports = {
-	
+
+  myprofile:function(req,res){
+
+  }
+
 };
 

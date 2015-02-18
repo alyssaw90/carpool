@@ -5,7 +5,7 @@
   <h1 class="text-center">Happy Carpooling!</h1>
   <div ng-controller="CarouselCtrl" >
     <div style="height: 305px">
-      <carousel interval="myInterval">
+      <carousel interval="myInterval" disable-animation="true">
         <slide ng-repeat="slide in slides" active="slide.active">
           <img ng-src="{{slide.image}}" style="margin:auto;">
           <div class="carousel-caption">

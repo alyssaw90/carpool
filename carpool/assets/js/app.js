@@ -1,4 +1,4 @@
-var carpoolApp = angular.module('CarpoolApp',['ui.bootstrap','ngRoute', 'ngAnimate']);
+var carpoolApp = angular.module('CarpoolApp',['ui.bootstrap','ngRoute', 'ngAnimate','ngTouch']);
 
 carpoolApp.config(['$routeProvider', '$locationProvider',function($routeProvider,$locationProvider) {
 
@@ -27,12 +27,12 @@ carpoolApp.config(['$routeProvider', '$locationProvider',function($routeProvider
     controller:'StaticCtrl'
   })
 
-  carpoolApp.run(['UserService',function(UserService){
-
-    UserService.check(function(err,data){
-        console.log('check',err,data);
-    });
-
 }]);
 
-}])
+carpoolApp.run(['UserService',function(UserService){
+
+  UserService.check(function(err,data){
+      console.log('check',err,data);
+  });
+
+}]);
