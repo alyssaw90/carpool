@@ -1,10 +1,7 @@
 carpoolApp.controller('AuthModalCtrl',['$scope','$http','$modalInstance','UserService','AlertService',function($scope,$http,$modalInstance,UserService,AlertService){
 
-    $scope.loginData={email:'',password:''};
-    $scope.signupData={};
-
     $scope.login = function(){
-        UserService.login($scope.loginData.email,$scope.loginData.password,
+        UserService.login($scope.email,$scope.password,
             function(err,data){
                 if(err){
                     //server error
@@ -28,18 +25,17 @@ carpoolApp.controller('AuthModalCtrl',['$scope','$http','$modalInstance','UserSe
         }
 
         var signupData={
-            email:$scope.signupEmail,
-            password:$scope.signupPassword,
-            firstName:$scope.signupFirstName,
-            lastName:$scope.signupLastName
+            email:$scope.email,
+            password:$scope.password,
+            firstName:$scope.firstName,
+            lastName:$scope.lastName
         };
 
         console.log(signupData);
 
         $http.post('/api/user',signupData)
         .success(function(data){
-            AlertService.add('success','You have been signed up.');
-            $modalInstance.close();
+            $scope.login()
         })
         .error(function(err){
             console.log(err);

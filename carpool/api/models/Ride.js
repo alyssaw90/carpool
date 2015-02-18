@@ -24,8 +24,19 @@ module.exports = {
     maxRiders: {
       type: 'integer',
       required: true
+    },
+    carMake: {
+      type: 'string',
+      required: true
+    },
+    carModel: {
+      type: 'string',
+      required: true
+    },
+    carColor: {
+      type: 'string',
+      required: true
     }
-
   }
 };
 

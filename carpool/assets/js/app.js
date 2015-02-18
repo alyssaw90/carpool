@@ -1,4 +1,4 @@
-var carpoolApp = angular.module('CarpoolApp',['ui.bootstrap','ngRoute']);
+var carpoolApp = angular.module('CarpoolApp',['ui.bootstrap','ngRoute', 'ngAnimate']);
 
 carpoolApp.config(['$routeProvider', '$locationProvider',function($routeProvider,$locationProvider) {
 
@@ -14,9 +14,13 @@ carpoolApp.config(['$routeProvider', '$locationProvider',function($routeProvider
     templateUrl:'/views/ride/new.html',
     controller:'RideNewCtrl'
   })
+  .when('/user/myprofile',{
+    templateUrl:'/views/user/myprofile.html',
+    controller:'UserCtrl'
+  })
   .when('/about',{
     templateUrl:'/views/about.html',
-        controller:'StaticCtrl'
+    controller:'StaticCtrl'
   })
   .when('/faq',{
     templateUrl:'/views/faq.html',

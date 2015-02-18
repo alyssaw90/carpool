@@ -1,6 +1,4 @@
 carpoolApp.controller('CarouselCtrl', function ($scope) {
-
-
   $scope.myInterval = 5000;
   var slides = $scope.slides = [];
   $scope.addSlide = function() {
