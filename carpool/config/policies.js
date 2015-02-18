@@ -19,13 +19,13 @@
 
 module.exports.policies = {
 
-  '*':['forbidden'],
-  'PagesController': true,
-  'AuthController':true,
-  'UserController':{
-    '*':['sessionAuth'],
-    'create':true
-  }
+  // '*':['forbidden'],
+  // 'PagesController': true,
+  // 'AuthController':true,
+  // 'UserController':{
+  //   '*':['sessionAuth'],
+  //   'create':true
+  // }
 
   /***************************************************************************
   *                                                                          *

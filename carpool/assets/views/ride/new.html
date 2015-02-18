@@ -1,33 +1,35 @@
 <h1>Create a new ride</h1>
 <form>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label>Name your ride</label>
-    <input type="text" class="form-control" required>
-  </div>
+    <input type="text" class="form-control">
+  </div> -->
   <div class="form-group">
     <label>Starting point</label>
-    <input type="text" class="form-control" required>
+    <input type="text" ng-model="startAddress" placeholder="Enter starting address" typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
   </div>
   <div class="form-group">
     <label>End point</label>
-    <input type="text" class="form-control" required>
+    <input type="text" ng-model="endAddress" placeholder="Enter end address" typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label>Car Make</label>
-    <input type="text" class="form-control" required>
+    <input type="text" class="form-control">
   </div>
   <div class="form-group">
     <label>Car Model</label>
-    <input type="text" class="form-control" required>
+    <input type="text" class="form-control">
   </div>
   <div class="form-group">
     <label>Car Color</label>
-    <input type="text" class="form-control" required>
+    <input type="text" class="form-control">
   </div>
   <div class="form-group">
     <label>Max number of riders</label>
-    <input type="number" class="form-control" required>
-  </div>
+    <input type="number" class="form-control">
+  </div> -->
   <input type="submit" value="Submit" class="btn btn-primary">
 </form>
 
