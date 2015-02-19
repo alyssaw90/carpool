@@ -2,10 +2,14 @@ carpoolApp.controller('HomeCtrl', ['$scope', 'UserService','AlertService', funct
 
   console.log('home controller running')
 
+  $scope.rides = [];
+
   $scope.UserService = UserService;
   $scope.$watchCollection('UserService', function(){
     $scope.currentUser = UserService.currentUser
   });
+
+
 
 
 }])

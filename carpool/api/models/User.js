@@ -26,12 +26,19 @@ module.exports = {
     password: {
       type: 'string',
       required: true
+    },
+
+    //Assocaiations
+    ride:{
+      collection:'Ride',
+      via: 'owner'
+    },
+
+    toJSON:function(){
+      var userObject = this.toObject();
+      delete userObject.password;
+      return userObject
     }
-    // toJSON:function(){
-    //   var userObject = this.toObject();
-    //   delete userObject.password;
-    //   return userObject
-    // }
   },
   beforeCreate:function(value, cb){
     bcrypt.hash(value.password, 10, function(err, hash){

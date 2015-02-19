@@ -21,7 +21,8 @@
 <!-- Showing after a user logs in -->
 <div ng-show="currentUser">
   <div class="row">
-    <h1>Add or join a ride <a href="/ride/new" class="btn btn-success pull-right">Add a ride</a> </h1>
+    <h1>All Carpools<a href="/ride/new" class="btn btn-success pull-right">Add a carpool</a> </h1>
+    <h4>Click on a ride to find out more information or join it.</h4>
   </div>
   <div class="row">
     <table class="table">
@@ -30,21 +31,21 @@
           <th>Ride Name</th>
           <th>Starting point</th>
           <th>Ending point</th>
-          <th>Driver</th>
-          <th>Number of Riders</th>
-          <th>Max number of Riders</th>
-          <th>Join Ride</th>
+          <!-- <th>Driver</th> -->
+          <!-- <th>Number of Riders</th> -->
+          <!-- <th>Max number of Riders</th> -->
+          <!-- <th>Join Ride</th> -->
         </tr>
       </thead>
-      <tbody>
+      <tbody ng-repeat="ride in rides">
         <tr>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><button class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></button></td>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td><button class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></button></td> -->
         </tr>
       </tbody>
     </table>

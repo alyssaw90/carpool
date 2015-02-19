@@ -39,6 +39,8 @@ module.exports.routes = {
   'delete /api/auth':'AuthController.logout',
   'get /api/auth':'AuthController.check',
 
+  'post /api/ride':'RideController.create',
+
   'get /api/user/me':'UserController.myprofile',
 
   "get *": {
