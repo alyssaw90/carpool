@@ -1,16 +1,27 @@
-carpoolApp.controller('UserCtrl', ['$scope', 'UserService', function($scope,UserService){
+carpoolApp.controller('UserCtrl', ['$scope', '$http', 'UserService', function($scope,$http,UserService){
 
   $scope.currentUser = UserService.currentUser
 
-  $scope.name = $scope.currentUser
-
   $scope.firstName = $scope.currentUser.firstName
   $scope.lastName = $scope.currentUser.lastName
-  $scope.email = $scope.currentUser.email
-  // $scope.rideName = $scope.currentUser.ride
 
+  var req = {
+    method: 'get',
+    url:'/api/user/'+$scope.currentUser.id+'/ride'
+  }
+  $http.get('url')
+  $http(req).success(function(data){
+    $scope.user = data;
+  })
 
-
+  $scope.deleteRide = function(idx){
+    var rideId = $scope.rides[idx].id;
+    $http.delete('/api/ride/'+rideId).success(function(data){
+      $scope.rides.splice(idx,1);
+    }).error(function(err){
+      alert(err);
+    })
+  }
 
 
 }])
