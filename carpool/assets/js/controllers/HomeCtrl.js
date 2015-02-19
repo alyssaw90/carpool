@@ -1,4 +1,4 @@
-carpoolApp.controller('HomeCtrl', ['$scope', 'UserService','AlertService', function($scope,UserService,AlertService){
+carpoolApp.controller('HomeCtrl', ['$scope', '$http', 'UserService','AlertService', function($scope,$http,UserService,AlertService){
 
   console.log('home controller running')
 
@@ -8,6 +8,21 @@ carpoolApp.controller('HomeCtrl', ['$scope', 'UserService','AlertService', funct
   $scope.$watchCollection('UserService', function(){
     $scope.currentUser = UserService.currentUser
   });
+
+  //Call to server to get data posted on the home page
+  var req = {
+    method: 'get',
+    url:'/api/ride',
+    params:{
+      'sort':'createdAt desc'
+    }
+  }
+  $http.get('url')
+  $http(req).success(function(data){
+    $scope.rides = data;
+  })
+
+
 
 
 
