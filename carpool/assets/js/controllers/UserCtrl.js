@@ -7,5 +7,10 @@ carpoolApp.controller('UserCtrl', ['$scope', 'UserService', function($scope,User
   $scope.firstName = $scope.currentUser.firstName
   $scope.lastName = $scope.currentUser.lastName
   $scope.email = $scope.currentUser.email
+  // $scope.rideName = $scope.currentUser.ride
+
+
+
+
 
 }])
