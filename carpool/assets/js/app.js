@@ -14,6 +14,10 @@ carpoolApp.config(['$routeProvider', '$locationProvider','uiGmapGoogleMapApiProv
     templateUrl:'/views/ride/new.html',
     controller:'RideNewCtrl'
   })
+  .when('/ride/:id',{
+    templateUrl:'/views/ride/show.html',
+    controller:'RideShowCtrl'
+  })
   .when('/user/myprofile',{
     templateUrl:'/views/user/myprofile.html',
     controller:'UserCtrl'
