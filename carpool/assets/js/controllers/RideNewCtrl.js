@@ -31,8 +31,8 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
   angular.extend($scope, {
     map: {
       center: {
-        latitude: 35.681382,
-        longitude: 139.766084
+        latitude: 47.6233544,
+        longitude:  -122.3301121
       },
       options: {
         maxZoom: 20,
@@ -40,10 +40,33 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
       },
       zoom: 16,
       control: {},
-      marker: {}
+      markers: []
     },
     address: ''
   });
+
+  $scope.startSelected = function(item,model,label){
+    console.log('data',item,model,label);
+    $scope.map.markers.push({
+      id:$scope.map.markers.length,
+      coords:{
+        latitude: item.geometry.location.lat,
+        longitude: item.geometry.location.lng
+      }
+    })
+  }
+
+  $scope.stopSelected = function(item,model,label){
+    console.log('data',item,model,label);
+    $scope.map.markers.push({
+      id:$scope.map.markers.length,
+      coords:{
+        latitude: item.geometry.location.lat,
+        longitude: item.geometry.location.lng
+      }
+    })
+  }
+
 
   $scope.getLocation = function(val) {
     return $http.get('http://maps.googleapis.com/maps/api/geocode/json', {
@@ -52,9 +75,12 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
         sensor: false
       }
     }).then(function(response){
-      return response.data.results.map(function(item){
-        return item.formatted_address;
-      });
+      return response.data.results;
+
+      // .map(function(item){
+      //   // console.log(item.formatted_address)
+      //   return item.formatted_address;
+      // });
     });
   };
 
