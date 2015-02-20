@@ -1,44 +1,52 @@
-<h1>Create a new ride</h1>
-<form class="form" ng-submit="createRide()">
-  <div class="form-group">
-    <label>Name your ride</label>
-    <input ng-model="rideName" type="text" class="form-control">
+<div class="row">
+  <div class="text-center">
+    <h1>Create a new ride</h1>
   </div>
-  <div class="form-group">
-    <label>Starting point</label>
-    <input type="text" ng-model="start" placeholder="Enter starting address" typeahead="address as address.formatted_address for address in getLocation($viewValue)" typeahead-on-select="startSelected($item, $model, $label)" typeahead-loading="loadingLocations" class="form-control">
-    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+</div>
+<div class="row">
+<!-- FORM -->
+  <div class="col-sm-4">
+    <form class="form" ng-submit="createRide()">
+      <div class="form-group">
+        <label>Name your ride</label>
+        <input ng-model="rideName" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Starting point</label>
+        <input type="text" ng-model="start" placeholder="Enter starting address" typeahead="address as address.formatted_address for address in getLocation($viewValue)" typeahead-on-select="startSelected($item, $model, $label)" typeahead-loading="loadingLocations" class="form-control">
+        <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+      </div>
+      <div class="form-group">
+        <label>End point</label>
+        <input type="text" ng-model="stop" placeholder="Enter end address" typeahead="address as address.formatted_address for address in getLocation($viewValue)" typeahead-on-select="stopSelected($item, $model, $label)" typeahead-loading="loadingLocations" class="form-control">
+        <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+      </div>
+      <div class="form-group">
+        <label>Car Make</label>
+        <input ng-model="carMake" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Car Model</label>
+        <input ng-model="carModel" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Car Color</label>
+        <input ng-model="carColor" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Max number of riders</label>
+        <input ng-model="maxRiders" type="number" class="form-control">
+      </div>
+      <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
   </div>
-  <div class="form-group">
-    <label>End point</label>
-    <input type="text" ng-model="stop" placeholder="Enter end address" typeahead="address as address.formatted_address for address in getLocation($viewValue)" typeahead-on-select="stopSelected($item, $model, $label)" typeahead-loading="loadingLocations" class="form-control">
-    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
-  </div>
-  <div class="form-group">
-    <label>Car Make</label>
-    <input ng-model="carMake" type="text" class="form-control">
-  </div>
-  <div class="form-group">
-    <label>Car Model</label>
-    <input ng-model="carModel" type="text" class="form-control">
-  </div>
-  <div class="form-group">
-    <label>Car Color</label>
-    <input ng-model="carColor" type="text" class="form-control">
-  </div>
-  <div class="form-group">
-    <label>Max number of riders</label>
-    <input ng-model="maxRiders" type="number" class="form-control">
-  </div>
-  <input type="submit" value="Submit" class="btn btn-primary">
-</form>
-
-
-<!-- GOOGLE MAP STUFF -->
-
-<ui-gmap-google-map center='map.center' zoom='map.zoom'>
-  <ui-gmap-marker ng-repeat="startMarker in map.markers" coords="startMarker.coords" idkey="startMarker.id"></ui-gmap-marker>
-  <ui-gmap-marker ng-repeat="stopMarker in map.markers" coords="stopMarker.coords" idkey="stopMarker.id"></ui-gmap-marker>
-</ui-gmap-google-map>
+  <!-- GOOGLE MAPS STUFF -->
+  <div class="col-sm-8">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+    <ui-gmap-marker ng-repeat="startMarker in map.markers" coords="startMarker.coords" idkey="startMarker.id"></ui-gmap-marker>
+    <ui-gmap-marker ng-repeat="stopMarker in map.markers" coords="stopMarker.coords" idkey="stopMarker.id"></ui-gmap-marker>
+  </ui-gmap-google-map>
+</div>
+</div>
 
 
