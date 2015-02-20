@@ -5,13 +5,22 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
         $scope.alert=false;
         var data = {
           rideName: $scope.rideName,
-          start: $scope.start,
-          stop: $scope.stop,
+          start: $scope.start.formatted_address,
+          stop: $scope.stop.formatted_address,
           maxRiders: $scope.maxRiders,
           carMake: $scope.carMake,
           carModel: $scope.carModel,
-          carColor: $scope.carColor
+          carColor: $scope.carColor,
+          geoStart:{
+            latitude: $scope.start.geometry.location.lat,
+            longitude: $scope.start.geometry.location.lng
+          },
+          geoEnd:{
+            latitude: $scope.stop.geometry.location.lat,
+            longitude: $scope.stop.geometry.location.lng
+          }
         };
+        console.log(data)
         $http.post('/api/ride',data).success(function(data){
             $scope.alert="Your post has been created.";
             $scope.rideName="";

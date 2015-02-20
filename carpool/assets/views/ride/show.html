@@ -1,15 +1,14 @@
 <div class="row">
   <div class="col-sm-8">
-    <h1>{{ride.rideName}}</h1>
-    <a class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></a>
+    <h1>{{ride.rideName}} <a class="btn btn-success pull-right">Join carpool</a></h1>
       <ul>
-        <li>{{ride.start}}</li>
-        <li>{{ride.stop}}</li>
-        <li>{{ride.carMake}}</li>
-        <li>{{ride.carModel}}</li>
-        <li>{{ride.carColor}}</li>
-        <li>{{ride.maxRiders}}</li>
-        <li>{{ride.owner.firstName}} {{ride.owner.lastName}}</li>
+        <li><b>Start location:</b> {{ride.start}}</li>
+        <li><b>End location:</b> {{ride.stop}}</li>
+        <li><b>Car Make:</b> {{ride.carMake}}</li>
+        <li><b>Car Model:</b> {{ride.carModel}}</li>
+        <li><b>Car Color:</b> {{ride.carColor}}</li>
+        <li><b>Max Riders:</b> {{ride.maxRiders}}</li>
+        <li><b>Driver:</b> {{ride.owner.firstName}} {{ride.owner.lastName}}</li>
       </ul>
   </div>
 

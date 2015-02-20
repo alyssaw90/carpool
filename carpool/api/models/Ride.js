@@ -37,6 +37,12 @@ module.exports = {
       type: 'string'
       // required: true
     },
+    geoStart: {
+        type: 'json'
+    },
+    geoEnd: {
+      type: 'json'
+    },
 
     // Associations
     owner: {

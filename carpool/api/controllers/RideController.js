@@ -16,6 +16,8 @@ module.exports = {
       carMake: req.body.carMake,
       carModel: req.body.carModel,
       carColor: req.body.carColor,
+      geoStart: req.body.geoStart,
+      geoEnd: req.body.geoEnd,
       owner: req.session.user
     };
 

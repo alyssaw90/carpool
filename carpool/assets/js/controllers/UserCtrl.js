@@ -14,7 +14,8 @@ carpoolApp.controller('UserCtrl', ['$scope', '$http', 'UserService', function($s
   $http.get('url')
   $http(req).success(function(data){
     $scope.user = data;
-  })
+    $scope.rides = data;
+  });
 
   $scope.deleteRide = function(idx){
     var rideId = $scope.rides[idx].id;

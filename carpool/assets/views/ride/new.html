@@ -8,8 +8,8 @@
   <div class="col-sm-4">
     <form class="form" ng-submit="createRide()">
       <div class="form-group">
-        <label>Name your ride</label>
-        <input ng-model="rideName" type="text" class="form-control">
+        <label>Ride Name</label>
+        <input ng-model="rideName" type="text" class="form-control" placeholder="Name your ride here">
       </div>
       <div class="form-group">
         <label>Starting point</label>
@@ -23,19 +23,22 @@
       </div>
       <div class="form-group">
         <label>Car Make</label>
-        <input ng-model="carMake" type="text" class="form-control">
+        <input ng-model="carMake" type="text" class="form-control" placeholder="Car make here (i.e. Nissan, Toyota, Hyndai)">
       </div>
       <div class="form-group">
         <label>Car Model</label>
-        <input ng-model="carModel" type="text" class="form-control">
+        <input ng-model="carModel" type="text" class="form-control" placeholder="Car model here (i.e. Altima, Corrola, Accent)">
       </div>
       <div class="form-group">
         <label>Car Color</label>
-        <input ng-model="carColor" type="text" class="form-control">
+        <input ng-model="carColor" type="text" class="form-control" placeholder="Car color here">
       </div>
       <div class="form-group">
         <label>Max number of riders</label>
-        <input ng-model="maxRiders" type="number" class="form-control">
+        <input ng-model="maxRiders" type="number" class="form-control" placeholder="How many passengers you want">
+      </div>
+      <div class="form-group">
+        <label>Leave time</label>
       </div>
       <input type="submit" value="Submit" class="btn btn-primary">
     </form>
