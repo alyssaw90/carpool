@@ -1,6 +1,6 @@
+<h1><b>Ride Name: </b>{{ride.rideName}} <a class="btn btn-success pull-right">Join carpool</a></h1>
 <div class="row">
-  <div class="col-sm-8">
-    <h1>{{ride.rideName}} <a class="btn btn-success pull-right">Join carpool</a></h1>
+  <div class="col-sm-4">
       <ul>
         <li><b>Start location:</b> {{ride.start}}</li>
         <li><b>End location:</b> {{ride.stop}}</li>
@@ -11,5 +11,13 @@
         <li><b>Driver:</b> {{ride.owner.firstName}} {{ride.owner.lastName}}</li>
       </ul>
   </div>
-
+  <div class="col-sm-8">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+    <ui-gmap-marker ng-repeat="startMarker in map.markers" coords="startMarker.coords" idkey="startMarker.id"></ui-gmap-marker>
+    <ui-gmap-marker ng-repeat="stopMarker in map.markers" coords="stopMarker.coords" idkey="stopMarker.id"></ui-gmap-marker>
+  </ui-gmap-google-map>
 </div>
+</div>
+
+
+
