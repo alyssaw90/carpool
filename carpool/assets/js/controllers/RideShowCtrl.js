@@ -2,11 +2,18 @@ carpoolApp.controller('RideShowCtrl', ['$scope', '$http', '$routeParams', '$loca
 
   var rideId = $routeParams.id;
   $http.get('/api/ride/'+rideId).success(function(data){
+    console.log(data)
     $scope.ride = data;
   }).error(function(err){
     $location.path('/');
     alert('Ride could not be found.');
   });
+
+  $scope.startingValue = $scope.startingValue || 0
+
+  $scope.joinButton = function(){
+    $scope.startingValue = $scope.startingValue + 1
+  }
 
   angular.extend($scope, {
     map: {
