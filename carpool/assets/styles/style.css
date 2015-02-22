@@ -1,3 +1,18 @@
+/*Global styles*/
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+}
+label {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+}
+
+.btn {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+}
+
 /*Nav Bar*/
 .nav-header {
   font-family: 'Fjalla One', sans-serif;
@@ -41,36 +56,31 @@ img {
   font-weight: normal;
   font-size: 30px;
 }
-.modal-labels {
-  font-family: 'Cantarell', sans-serif;
-  font-weight: 700;
-}
-.modal-button {
-  font-family: 'Cantarell', sans-serif;
-  font-weight: 700;
-}
 
 /*All carpool page*/
-.carpool-title {
-  font-family: 'Fjalla One', sans-serif;
-  font-weight: normal;
-}
 .carpool-add {
   font-family: 'Cantarell', sans-serif;
   font-weight: 700;
 }
 .carpool-about {
   font-family: 'Cantarell', sans-serif;
-  font-weight: 700;
 }
 table {
   font-family: 'Cantarell', sans-serif;
-  font-weight: 700;
 }
 .table-head {
   font-family: 'Cantarell', sans-serif;
-  font-weight: 700;
   font-size: 20px;
+}
+
+/*Ride show page*/
+.carpool-info {
+  font-family: 'Cantarell', sans-serif;
+}
+
+/*Profile page*/
+.profile-link {
+  font-family: 'Cantarell', sans-serif;
 }
 
 /*Map*/
