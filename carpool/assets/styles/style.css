@@ -7,13 +7,19 @@ label {
   font-family: 'Cantarell', sans-serif;
   font-weight: 700;
 }
-
 .btn {
   font-family: 'Cantarell', sans-serif;
   font-weight: 700;
 }
+body {
+  background-color: #B0F3FF;
+}
 
 /*Nav Bar*/
+.navbar {
+  background-color: #2499BA;
+  color: white;
+}
 .nav-header {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
@@ -22,7 +28,17 @@ label {
 .nav-links {
  font-family: 'Cantarell', sans-serif;
  font-weight: 700;
+ color: black;
 }
+.navbar-default
+.navbar-brand {
+  color: white;
+}
+.navbar-default
+.navbar-nav>li>a {
+  color: white;
+}
+
 
 /*Home Page Styles*/
 /*Home page title*/
