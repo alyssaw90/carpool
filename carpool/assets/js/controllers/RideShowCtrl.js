@@ -10,6 +10,13 @@ carpoolApp.controller('RideShowCtrl', ['$scope', '$http', '$routeParams', '$loca
   });
 
   $scope.startingValue = $scope.startingValue || 0
+  $scope.maxRiders = $scope.maxRiders
+
+  // $scope.joinButton = function(){
+  //   if($scope.startingValue !== $scope.maxRiders){
+  //     $scope.startingValue + 1
+  //   }
+  // }
 
   $scope.joinButton = function(){
     $scope.startingValue = $scope.startingValue + 1
