@@ -50,6 +50,29 @@ img {
   font-weight: 700;
 }
 
+/*All carpool page*/
+.carpool-title {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+}
+.carpool-add {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+}
+.carpool-about {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+}
+table {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+}
+.table-head {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 /*Map*/
 .angular-google-map-container{
   height:400px;

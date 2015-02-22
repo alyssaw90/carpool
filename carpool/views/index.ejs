@@ -21,7 +21,7 @@
           <li ng-hide="currentUser" class="nav-links"><a href="" ng-click="showLogin()">Login</a></li>
           <li ng-hide="currentUser" class="nav-links"><a href="" ng-click="showSignup()">Signup</a></li>
           <li ng-show="currentUser" class="dropdown" dropdown>
-            <a href="#" dropdown-toggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{currentUser.firstName || 'User'}}<span class="caret"></span></a>
+            <a href="#" dropdown-toggle class="dropdown-toggle nav-links" data-toggle="dropdown" role="button" aria-expanded="false">{{currentUser.firstName || 'User'}}<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="/user/myprofile">Profile</a></li>
               <li class="divider"></li>
