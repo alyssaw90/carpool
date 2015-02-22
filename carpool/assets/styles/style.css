@@ -1,3 +1,44 @@
+/*Nav Bar*/
+/*Nav Bar Header*/
+.nav-header {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+/*Nav bar links*/
+.nav-links {
+ font-family: 'Cantarell', sans-serif;
+ font-weight: 700;
+}
+
+/*Home Page Styles*/
+/*Home page title*/
+.home-title {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 46px;
+  font-size: 50px;
+  margin: 0 0 23px 0;
+}
+/*Carousel images*/
+img {
+  margin: auto;
+  width: 800px;
+}
+/*Carousel text*/
+.carousel-text {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 23px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0 0 23px 0;
+}
+
+/*Map*/
 .angular-google-map-container{
   height:400px;
 }
+

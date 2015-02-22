@@ -9,17 +9,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Carpool</a>
+        <a class="navbar-brand nav-header" href="/">Carpool</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div collapse="navCollapsed" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li ng-class="{active:isActive('/about')}"><a href="/about">About</a></li>
-          <li ng-class="{active:isActive('/faq')}"><a href="/faq">FAQ</a></li>
+          <li ng-class="{active:isActive('/about')}" class="nav-links"><a href="/about">About</a></li>
+          <li ng-class="{active:isActive('/faq')}" class="nav-links"><a href="/faq">FAQ</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li ng-hide="currentUser" ><a href="" ng-click="showLogin()">Login</a></li>
-          <li ng-hide="currentUser" ><a href="" ng-click="showSignup()">Signup</a></li>
+          <li ng-hide="currentUser" class="nav-links"><a href="" ng-click="showLogin()">Login</a></li>
+          <li ng-hide="currentUser" class="nav-links"><a href="" ng-click="showSignup()">Signup</a></li>
           <li ng-show="currentUser" class="dropdown" dropdown>
             <a href="#" dropdown-toggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{currentUser.firstName || 'User'}}<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -36,6 +36,8 @@
   <div class="container">
     <ng-view></ng-view>
   </div>
+
 </div>
+
 
 

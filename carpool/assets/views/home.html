@@ -2,14 +2,14 @@
 
 <!-- Only showing when user is not logged in. -->
 <div ng-hide="currentUser">
-  <h1 class="text-center">Happy Carpooling!</h1>
+  <h1 class="text-center home-title">Happy Carpooling!</h1>
   <div ng-controller="CarouselCtrl" >
     <div style="height: 305px">
       <carousel interval="myInterval" disable-animation="true">
         <slide ng-repeat="slide in slides" active="slide.active">
           <img ng-src="{{slide.image}}" style="margin:auto;">
           <div class="carousel-caption">
-            <h1>{{slide.text}}</h1>
+            <h1 class="carousel-text">{{slide.text}}</h1>
           </div>
         </slide>
       </carousel>
