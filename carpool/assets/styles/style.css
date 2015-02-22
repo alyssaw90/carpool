@@ -1,11 +1,9 @@
 /*Nav Bar*/
-/*Nav Bar Header*/
 .nav-header {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
-/*Nav bar links*/
 .nav-links {
  font-family: 'Cantarell', sans-serif;
  font-weight: 700;
@@ -35,6 +33,21 @@ img {
   text-transform: uppercase;
   letter-spacing: -1px;
   margin: 0 0 23px 0;
+}
+
+/*Modal styling*/
+.modal-title {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+}
+.modal-labels {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+}
+.modal-button {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
 }
 
 /*Map*/
