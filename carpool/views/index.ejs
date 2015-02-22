@@ -23,9 +23,9 @@
           <li ng-show="currentUser" class="dropdown" dropdown>
             <a href="#" dropdown-toggle class="dropdown-toggle nav-links" data-toggle="dropdown" role="button" aria-expanded="false">{{currentUser.firstName || 'User'}}<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/user/myprofile">Profile</a></li>
+              <li class="nav-links"><a href="/user/myprofile">Profile</a></li>
               <li class="divider"></li>
-              <li><a href="" ng-click="logout()">Logout</a></li>
+              <li class="nav-links"><a href="" ng-click="logout()">Logout</a></li>
             </ul>
           </li>
         </ul>

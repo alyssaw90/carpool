@@ -28,7 +28,6 @@ body {
 .nav-links {
  font-family: 'Cantarell', sans-serif;
  font-weight: 700;
- color: black;
 }
 .navbar-default
 .navbar-brand {
@@ -38,7 +37,12 @@ body {
 .navbar-nav>li>a {
   color: white;
 }
-
+.dropdown-menu {
+  background-color: #2499BA;
+}
+.dropdown-menu>li>a {
+  color: white;
+}
 
 /*Home Page Styles*/
 /*Home page title*/
