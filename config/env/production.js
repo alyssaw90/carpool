@@ -24,7 +24,7 @@ module.exports = {
   },
   models: {
     connection: 'someMongodbServerProd'
-  },\
+  }
 
   /***************************************************************************
    * Set the port in the production environment to 80                        *
