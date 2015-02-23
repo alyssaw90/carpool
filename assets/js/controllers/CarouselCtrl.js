@@ -1,4 +1,4 @@
-carpoolApp.controller('CarouselCtrl',['$scope', function ($scope) {
+carpoolApp.controller('CarouselCtrl',['$scope', function($scope) {
   $scope.myInterval = 3000;
   $scope.slides = [
     {image:'/images/carpool-home.jpg',text:'Looking to set up a carpool?'},
