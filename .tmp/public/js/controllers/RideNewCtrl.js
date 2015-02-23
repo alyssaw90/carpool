@@ -79,7 +79,7 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
 
 
   $scope.getLocation = function(val) {
-    return $http.get('https://maps.googleapis.com/maps/api/geocode/json', {
+    return $http.get('//maps.googleapis.com/maps/api/geocode/json', {
       params: {
         address: val,
         sensor: false
