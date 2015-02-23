@@ -10,6 +10,15 @@ label {
 .btn {
   font-family: 'Cantarell', sans-serif;
   font-weight: 700;
+  background-color: #E58841;
+  border-color: #E58841;
+  color: white;
+}
+.btn:hover {
+  background-color: #E58841;
+  border-color: #E58841;
+  opacity: 0.9;
+  color: white;
 }
 body {
   background-color: #B0F3FF;
@@ -76,11 +85,27 @@ img {
   font-weight: normal;
   font-size: 30px;
 }
+.modal-button {
+  background-color: #15797F;
+  border-color: #15797F;
+}
+.modal-button:hover {
+  background-color: #15797F;
+  border-color: #15797F;
+  opacity: 0.9;
+}
 
 /*All carpool page*/
 .carpool-add {
   font-family: 'Cantarell', sans-serif;
   font-weight: 700;
+  background-color: #E58841;
+  border-color: #E58841;
+}
+.carpool-add:hover {
+  background-color: #E58841;
+  border-color: #E58841;
+  opacity: 0.9;
 }
 .carpool-about {
   font-family: 'Cantarell', sans-serif;
@@ -101,6 +126,15 @@ table {
 /*Profile page*/
 .profile-link {
   font-family: 'Cantarell', sans-serif;
+}
+.deleteButton {
+  background-color: #BF0700;
+  border-color: #BF0700;
+}
+.deleteButton:hover {
+  background-color: #BF0700;
+  border-color: #BF0700;
+  opacity: 0.8;
 }
 
 /*Map*/
