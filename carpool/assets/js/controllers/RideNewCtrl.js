@@ -8,6 +8,7 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
           start: $scope.start.formatted_address,
           stop: $scope.stop.formatted_address,
           maxRiders: $scope.maxRiders,
+          currentRiders: $scope.currentRiders,
           carMake: $scope.carMake,
           carModel: $scope.carModel,
           carColor: $scope.carColor,
@@ -85,11 +86,6 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
       }
     }).then(function(response){
       return response.data.results;
-
-      // .map(function(item){
-      //   // console.log(item.formatted_address)
-      //   return item.formatted_address;
-      // });
     });
   };
 

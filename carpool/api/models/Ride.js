@@ -25,6 +25,10 @@ module.exports = {
       type: 'integer'
       // required: true
     },
+    currentRiders:{
+      type:'integer',
+      defaultsTo:0
+    },
     carMake: {
       type: 'string'
       // required: true

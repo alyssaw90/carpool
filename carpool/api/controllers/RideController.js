@@ -13,6 +13,7 @@ module.exports = {
       start: req.body.start,
       stop: req.body.stop,
       maxRiders: req.body.maxRiders,
+      currentRiders: req.body.currentRiders,
       carMake: req.body.carMake,
       carModel: req.body.carModel,
       carColor: req.body.carColor,

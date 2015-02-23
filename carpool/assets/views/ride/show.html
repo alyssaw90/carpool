@@ -1,6 +1,5 @@
-<h1><b>Ride Name: </b>{{ride.rideName}}
-  <button class="btn btn-success pull-right" ng-click="joinButton()">Join Carpool</button>
-</h1>
+<h1><b>Ride Name: </b>{{ride.rideName}}</h1>
+  <button class="btn btn-success" ng-click="joinButton()" ng-disabled="ride.currentRiders >= ride.maxRiders">Join Carpool</button>
 <div class="row">
   <div class="col-sm-4">
       <ul class="carpool-info">
@@ -9,7 +8,7 @@
         <li><b>Car Make:</b> {{ride.carMake}}</li>
         <li><b>Car Model:</b> {{ride.carModel}}</li>
         <li><b>Car Color:</b> {{ride.carColor}}</li>
-        <li><b>Number of riders in carpool:</b> {{startingValue}}</li>
+        <li><b>Number of riders in carpool:</b> {{ride.currentRiders}}</li>
         <li><b>Max Riders:</b> {{ride.maxRiders}}</li>
         <li><b>Driver:</b> {{ride.owner.firstName}} {{ride.owner.lastName}}</li>
       </ul>

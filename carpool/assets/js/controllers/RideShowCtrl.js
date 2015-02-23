@@ -3,25 +3,28 @@ carpoolApp.controller('RideShowCtrl', ['$scope', '$http', '$routeParams', '$loca
   var rideId = $routeParams.id;
   $http.get('/api/ride/'+rideId).success(function(data){
     console.log(data)
+    if(!data.currentRiders) data.currentRiders=0;
     $scope.ride = data;
     $scope.maxRiders = data.maxRiders
-    console.log($scope.maxRiders)
+
   }).error(function(err){
     $location.path('/');
     alert('Ride could not be found.');
   });
 
-  $scope.startingValue = $scope.startingValue || 0
 
   $scope.joinButton = function(){
-    if($scope.startingValue != $scope.maxRiders){
-      $scope.startingValue = $scope.startingValue + 1
+    if($scope.ride.currentRiders < $scope.maxRiders){
+      var riderCount = $scope.ride.currentRiders + 1
+      $http.put('/api/ride/'+rideId,{currentRiders:riderCount})
+      .success(function(data){
+        $scope.ride.currentRiders = riderCount;
+      }).error(function(err){
+        alert('An error occured. Could not update');
+        console.log('error',err);
+      })
     }
   }
-
-  // $scope.joinButton = function(){
-  //   $scope.startingValue = $scope.startingValue + 1
-  // }
 
   angular.extend($scope, {
     map: {
