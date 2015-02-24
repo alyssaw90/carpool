@@ -28,7 +28,7 @@ carpoolApp.controller('MainNavCtrl', ['$scope', '$modal','$location', 'UserServi
 
     $scope.logout = function(){
         UserService.logout(function(err,data){
-
+          $location.path('/')
         });
     }
 
