@@ -146,7 +146,7 @@ table {
 }
 
 /*About page*/
-img {
+.about {
   height: 250px;
   width: 250px;
   margin-bottom: 30px;
