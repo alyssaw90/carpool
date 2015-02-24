@@ -1,3 +1,0 @@
-carpoolApp.controller('StaticCtrl',[function(){
-
-}]);

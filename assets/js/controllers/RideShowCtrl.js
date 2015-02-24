@@ -6,12 +6,12 @@ carpoolApp.controller('RideShowCtrl', ['$scope', '$http', '$routeParams', '$loca
     if(!data.currentRiders) data.currentRiders=0;
     $scope.ride = data;
     $scope.maxRiders = data.maxRiders
-
+    $scope.geoStart = data.geoStart
+    $scope.geoEnd = data.geoEnd
   }).error(function(err){
     $location.path('/');
     alert('Ride could not be found.');
   });
-
 
   $scope.joinButton = function(){
     if($scope.ride.currentRiders < $scope.maxRiders){
@@ -25,6 +25,9 @@ carpoolApp.controller('RideShowCtrl', ['$scope', '$http', '$routeParams', '$loca
       })
     }
   }
+
+  $scope.startMaker = $scope.geoStart
+  console.log($scope.startMaker)
 
   angular.extend($scope, {
     map: {
@@ -42,5 +45,10 @@ carpoolApp.controller('RideShowCtrl', ['$scope', '$http', '$routeParams', '$loca
     },
     address: ''
   });
+
+
+
+
+
 
 }])

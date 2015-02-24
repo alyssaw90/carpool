@@ -1,4 +1,4 @@
-carpoolApp.directive('disableAnimation', function($animate){
+carpoolApp.directive('disableAnimation', ['$animate',function($animate){
     return {
         restrict: 'A',
         link: function($scope, $element, $attrs){
@@ -7,4 +7,4 @@ carpoolApp.directive('disableAnimation', function($animate){
             });
         }
     }
-});
+}]);
