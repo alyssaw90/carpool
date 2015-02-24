@@ -41,14 +41,14 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
   angular.extend($scope, {
     map: {
       center: {
-        latitude: 43.7543352,
-        longitude:  -98.8630678
+        latitude: 47.675292,
+        longitude:  -122.3018448
       },
       options: {
         maxZoom: 20,
         minZoom: 3
       },
-      zoom: 4,
+      zoom: 11,
       control: {},
       markers: []
     },
