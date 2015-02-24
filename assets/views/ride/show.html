@@ -12,8 +12,10 @@
         <li><b>Max Riders:</b> {{ride.maxRiders}}</li>
         <li><b>Driver:</b> {{ride.owner.firstName}} {{ride.owner.lastName}}</li>
       </ul>
-      <h4 class="contact-driver">Click below to contact the driver after joining the ride.</h4>
-      <a ng-href="mailto:{{ride.owner.email}}?subject=Joined your carpool&body=Hi! I joined your carpool.">Email</a>
+      <h4 class="contact-driver">Click below to contact the driver after joining the ride.
+      <br><br>
+      <a class= "email" ng-href="mailto:{{ride.owner.email}}?subject=Joined your carpool&body=Hi! I joined your carpool.">Email</a>
+      </h4>
   </div>
   <div class="col-sm-8">
     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
