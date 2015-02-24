@@ -1,11 +1,16 @@
-<div class="row">
-  <h1>{{firstName}} {{lastName}}</h1>
-</div>
-<div class="row">
-  <div ng-repeat="ride in user">
-    <div class="col-sm-8">
-      <a class="profile-link" href="/ride/{{ride.id}}">{{ride.rideName}}</a>
+<div class="text-center">
+  <div class="row">
+    <h1>{{firstName}} {{lastName}}'s Rides</h1>
+    <hr>
+  </div>
+  <div class="row">
+    <div ng-repeat="ride in user">
+      <div class="col-sm-8">
+        <h4><a class="profile-link" href="/ride/{{ride.id}}">{{ride.rideName}}</a>
+          <button ng-show="currentUser" ng-click="deleteRide($index)" class="btn btn-danger btn-xs deleteButton pull-right"><i class="glyphicon glyphicon-trash"></i></button>
+        </h4>
+      </div>
+
     </div>
-    <button ng-show="currentUser" ng-click="deleteRide($index)" class="btn btn-danger btn-xs deleteButton"><i class="glyphicon glyphicon-trash"></i></button>
   </div>
 </div>
