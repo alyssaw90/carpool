@@ -142,3 +142,21 @@ table {
   height:400px;
 }
 
+/*About page*/
+img {
+  height: 250px;
+  width: 250px;
+  margin-bottom: 30px;
+  border-radius: 150px;
+}
+.app-info {
+  font-family: 'Cantarell', sans-serif;
+}
+.developer{
+  padding-top: 50px;
+}
+.developer-info {
+  font-family: 'Cantarell', sans-serif;
+  font-size: 15px;
+}
+
