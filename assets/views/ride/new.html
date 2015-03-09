@@ -37,8 +37,8 @@
         <label>Max number of riders</label>
         <input ng-model="maxRiders" type="number" class="form-control" placeholder="How many passengers you want">
       </div>
-      <div ng-controller="TimeCtrl" class="form-group">
-        <timepicker ng-model="time" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+      <div class="form-group">
+        <timepicker ng-model="time" ng-change="changed()" hour-step="hstep" minute-step="mstep"></timepicker>
       </div>
       <input type="submit" value="Submit" class="btn btn-primary">
 

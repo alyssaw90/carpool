@@ -1,6 +1,16 @@
 carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogleMapApi' , function($scope,$http,$location,uiGmapGoogleMapApi){
   // $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 
+  $scope.mytime = new Date();
+
+  $scope.hstep = 1;
+  $scope.mstep = 15;
+
+  $scope.options = {
+    hstep: [1, 2, 3],
+    mstep: [1, 5, 10, 15, 25, 30]
+  };
+
   $scope.createRide = function(){
         $scope.alert=false;
         var data = {
@@ -88,5 +98,6 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
       return response.data.results;
     });
   };
+
 
 }])
