@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class="row">
-<!-- FORM -->
+  <!-- FORM -->
   <div class="col-sm-4">
     <form class="form" ng-submit="createRide()">
       <div class="form-group">
@@ -37,7 +37,15 @@
         <label>Max number of riders</label>
         <input ng-model="maxRiders" type="number" class="form-control" placeholder="How many passengers you want">
       </div>
+      <div ng-controller="TimeCtrl" class="form-group">
+
+        <timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+
+        <pre class="alert alert-info">Ride start time: {{mytime | date:'shortTime' }}</pre>
+
+      </div>
       <input type="submit" value="Submit" class="btn btn-primary">
+
     </form>
   </div>
   <!-- GOOGLE MAPS STUFF -->
