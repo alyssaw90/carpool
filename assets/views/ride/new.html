@@ -38,11 +38,7 @@
         <input ng-model="maxRiders" type="number" class="form-control" placeholder="How many passengers you want">
       </div>
       <div ng-controller="TimeCtrl" class="form-group">
-
-        <timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
-
-        <pre class="alert alert-info">Ride start time: {{mytime | date:'shortTime' }}</pre>
-
+        <timepicker ng-model="time" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
       </div>
       <input type="submit" value="Submit" class="btn btn-primary">
 

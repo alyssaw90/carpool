@@ -19,7 +19,8 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
           geoEnd:{
             latitude: $scope.stop.geometry.location.lat,
             longitude: $scope.stop.geometry.location.lng
-          }
+          },
+          time: $scope.time
         };
         console.log(data)
         $http.post('/api/ride',data).success(function(data){
