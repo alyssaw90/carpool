@@ -11,6 +11,11 @@ carpoolApp.controller('RideNewCtrl',['$scope', '$http', '$location','uiGmapGoogl
     mstep: [1, 5, 10, 15, 25, 30]
   };
 
+  $scope.ismeridian = true;
+  $scope.toggleMode = function() {
+    $scope.ismeridian = ! $scope.ismeridian;
+  };
+
   $scope.createRide = function(){
         $scope.alert=false;
         var data = {
